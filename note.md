@@ -1,6 +1,6 @@
 # 🧠 Smart Task Summarizer
 
-This is a simple AI-powered web app that helps project managers clean up messy task lists. It summarizes each task, adds useful tags, and assigns a priority score.
+This is a simple AI-powered web app that helps project managers clean up messy task lists. It summarizes each task, adds useful tags, and assigns a priority score. 
 
 ---
 
