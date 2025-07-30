@@ -11,25 +11,26 @@ const getPriorityColor = (priority) => {
 
 const TaskCard = ({ summary, tags, priority }) => {
   return (
-    <div className="rounded-xl border shadow-lg p-6 bg-gradient-to-br from-white to-gray-50 hover:shadow-xl transition-all">
-      <div className="flex items-center justify-between mb-3">
-        <h2 className="text-lg font-bold text-gray-800 flex items-center gap-2">
-          <BadgeCheck className="text-blue-600" size={20} />
-          {summary}
-        </h2>
-        <span
-          className={`text-white text-xs px-3 py-1 rounded-full ${getPriorityColor(priority)}`}
-        >
-          Priority {priority}
-        </span>
+    <div className="rounded-xl border shadow-lg p-6 bg-gradient-to-br from-white to-gray-50 hover:shadow-xl transition-all space-y-3">
+      {/* 🟢 Priority at the top */}
+      <div className="w-fit px-3 py-1 rounded-full text-white text-xs font-semibold tracking-wide uppercase shadow-sm animate-fadeIn"
+        style={{ backgroundColor: getPriorityColor(priority).replace("bg-", "").replace("-", "#") }}>
+        Priority {priority}
       </div>
 
-      <div className="text-sm text-gray-600 flex items-center gap-2 flex-wrap">
+      {/* ✅ Summary */}
+      <h2 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+        <BadgeCheck className="text-blue-600" size={20} />
+        {summary}
+      </h2>
+
+      {/* 🏷️ Tags */}
+      <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600">
         <Tag className="text-gray-400" size={16} />
         {tags.map((tag, idx) => (
           <span
             key={idx}
-            className="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs mb-1"
+            className="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs"
           >
             {tag}
           </span>
