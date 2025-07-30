@@ -37,7 +37,7 @@ const Summarizer = () => {
           </label>
           <textarea
             className="w-full h-60 p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400 text-sm"
-            placeholder="e.g. Fix login bug\nCall the vendor about dashboard delay\nSend feedback to UI team"
+            placeholder="e.g. Fix login bug, complete the work, meeting with client"
             value={tasksInput}
             onChange={(e) => setTasksInput(e.target.value)}
           />
