@@ -1,7 +1,8 @@
 import React from "react";
 import { BadgeCheck, Tag } from "lucide-react";
 
-const getPriorityColor = (priority) => {
+// Tailwind-based color classes by priority rank
+const getPriorityClass = (priority) => {
   if (priority === 1) return "bg-red-600";
   if (priority <= 3) return "bg-orange-500";
   if (priority <= 5) return "bg-yellow-400";
@@ -11,10 +12,10 @@ const getPriorityColor = (priority) => {
 
 const TaskCard = ({ summary, tags, priority }) => {
   return (
-    <div className="rounded-xl border shadow-lg p-6 bg-gradient-to-br from-white to-gray-50 hover:shadow-xl transition-all space-y-3">
-      {/* 🟢 Priority at the top */}
-      <div className="w-fit px-3 py-1 rounded-full text-white text-xs font-semibold tracking-wide uppercase shadow-sm animate-fadeIn"
-        style={{ backgroundColor: getPriorityColor(priority).replace("bg-", "").replace("-", "#") }}>
+    <div className="rounded-xl border shadow-lg p-6 bg-gradient-to-br from-white to-gray-50 hover:shadow-2xl transition-all space-y-4">
+      
+      {/* 🟢 Priority Badge at Top */}
+      <div className={`w-fit px-3 py-1 rounded-full text-white text-xs font-bold tracking-wide uppercase shadow ${getPriorityClass(priority)}`}>
         Priority {priority}
       </div>
 
