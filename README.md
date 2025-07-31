@@ -46,7 +46,7 @@ Smart-Task-Summarizer/
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/5ujay/smart-task-summarizer.git
+git clone https://github.com/5ujay/Smart-Task-Summarizer.git
 ```
 
 ### 2. Setup Backend
